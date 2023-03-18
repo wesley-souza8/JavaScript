@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada do 7</h1>
+    <p id="repetidor7"></p>
+
+    <h1>Tabuada Escolhida</h1>
+    <p id="repetidor"></p>
+
+    <h1>Tabuada do 1 ao 10</h1>
+    <p id="repetidorT"></p>
+    
+
+    <script>
+
+        let resultado7 = 0; // Definindo o valor da tabuada como 0
+        for(let numero7 = 1; numero7 <= 10; numero7++){ // Definiando que será de 1 a 10
+            resultado7 = 7 * numero7 // Difininado que será a tabuada do 7
+            document.getElementById("repetidor7").innerHTML += numero7 + " x 7 = " + resultado7 + "</br>" // imprimindo os resultados
+        }
+
+        let resultado = 0; // Definindo o valor da tabuada como 0
+        let multiplicador = Number(prompt("Digite qual número deseja saber a tabuada: ")); // Solicitando ao usuário qual tabuada deseja
+        for(let numero = 1; numero <= 10; numero++){ // Definiando que será de 1 a 10
+            resultado = multiplicador * numero // Gerando os resultado das multiplicações
+            document.getElementById("repetidor").innerHTML += numero + " x " + multiplicador + " = " + resultado + "</br>" // Imprimindo os resultados
+        }
+
+        let resultadoT = 0; // Definindo o valor da tabuada como 0
+        for(let total = 1; total <= 10; total++){ // Definindo que serão as tabuadas do 1 ao 10
+            for(let numeroT = 1; numeroT <= 10; numeroT++){ // Definando que a tabuada será multiplicada de 1 a 10
+                resultadoT = total * numeroT // Definindo o resultado da multiplicação
+                document.getElementById("repetidorT").innerHTML += numeroT + " x " + total + " = " + resultadoT + "</br>" // Imprimindo os resultados
+            }
+            document.getElementById("repetidorT").innerHTML += "</br>" // Adicionando uma linha entre as tabuadas
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
