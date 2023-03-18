@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando os Repetidores</title>
+</head>
+<body>
+    
+    <h1>Usando o FOR</h1>
+    <P id="repetidorFor"></P>
+
+    <h2>Usando o While com Número</h2>
+    <P id="repetidorWhileNumero"></P>
+
+    <h2>Usando o While com Texto</h2>
+    <P id="repetidorWhileTexto"></P>
+
+    <script>
+
+        for(let index = 2; index <= 5; index++){
+            document.getElementById("repetidorFor").innerHTML += index + " este é o for</br>"
+        }
+
+        //While com número
+        let contador = 2;
+        while (contador <= 5) {
+            document.getElementById("repetidorWhileNumero").innerHTML += contador + " Este é o While com número</br>"
+            contador ++
+        }
+
+        //While com texto
+        let senha = " ";
+        while (senha == "Senac123") {
+            document.getElementById("repetidorWhileTexto").innerHTML += senha + " Senha errada</br>"
+            senha=prompt("Digite a senha.<While>")
+        }
+
+        do {
+            document.getElementById("repetidorWhileTexto").innerHTML += senha + " Senha errada</br>"
+            senha=prompt("Digite a senha.<DO While>")
+            
+        } while (senha == "Senac123");
+
+    </script>
+</body>
+</html>
