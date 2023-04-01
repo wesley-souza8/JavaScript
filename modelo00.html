@@ -10,22 +10,61 @@
     <h1>Construindo Funções - Function</h1>
     <p id="fraseid0"></p>
     <p id="fraseid1"></p>
+    <p id="conta"></p>
     <script>
 
+// funções sem retorno, sem paramtero = procedimento
         function frase0(){
             let frase_dia0;            
             frase_dia0 = "As oportunidas não caem do céu, elas são construídas por você";
             document.getElementById("fraseid0").innerHTML = frase_dia0;
         }
         
+// funções com retorno, sem parametro
         function frase1(){
             let frase_dia1;            
             frase_dia1 = "Uma palavra para apagar do seu vocabulário: Impossível!";
             return frase_dia1;
         }
-
+        
         document.getElementById("fraseid1").innerHTML = frase1();
         frase0();
+
+// funções com parametro, com retorno
+        function multiplicar(v1,v2){
+            let resultado;
+            resultado = v1 * v2;
+            return resultado;
+        }
+                
+        document.getElementById("conta").innerHTML += multiplicar(5,6);
+
+// funções com parametro, com retorno, com prompt
+        let valor1 = Number(prompt("Digite o primeiro valor: "));
+        let valor2 = Number(prompt("Digite o segundo valor: "));
+
+        document.getElementById("conta").innerHTML += "<br/>" + multiplicarUsu(valor1,valor2);
+
+        function multiplicarUsu(v1,v2){
+            let resultado;
+            resultado = v1 * v2;
+            return resultado;
+        }
+                      
+// Funções procedimentos
+        let MaisCalculo = prompt("Quer somar outro valor?");
+
+        if (MaisCalculo == "sim"){
+            calculomult();
+        }
+
+        function calculomult(){
+            let valor1 = Number(prompt("Digite o primeiro valor: "));
+            let valor2 = Number(prompt("Digite o segundo valor: "));
+            resultado = valor1 + valor2
+        }
+
+        document.getElementById("conta").innerHTML += "<br/>" + resultado;
         
     </script>
     
