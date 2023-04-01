@@ -8,16 +8,25 @@
 </head>
 <body>
     <h1>Construindo Funções - Function</h1>
-    <p id="fraseid"></p>
+    <p id="fraseid0"></p>
+    <p id="fraseid1"></p>
     <script>
-        function frase(){
-            let frase_dia;            
-            frase_dia = "As oportunidas não caem do céu, elas são construídas por você";
-            return frase_dia;
+
+        function frase0(){
+            let frase_dia0;            
+            frase_dia0 = "As oportunidas não caem do céu, elas são construídas por você";
+            document.getElementById("fraseid0").innerHTML = frase_dia0;
+        }
+        
+        function frase1(){
+            let frase_dia1;            
+            frase_dia1 = "Uma palavra para apagar do seu vocabulário: Impossível!";
+            return frase_dia1;
         }
 
-        document.getElementById("fraseid").innerHTML = frase_dia
-
+        document.getElementById("fraseid1").innerHTML = frase1();
+        frase0();
+        
     </script>
     
 </body>
