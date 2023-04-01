@@ -11,9 +11,8 @@
     <p id="resultado"></p>
 
     <script>
-        let valor1 = Number(prompt("Digite o primeiro número: "));
-        let valor2 = Number(prompt("Digite o segundo número: "));      
-        let duvida = "sim";
+    
+        let duvida = prompt("Deseja relizar um cálculo? \n 1 - Sim \n 2 - Não");
         let total = 0
 
         function soma(v1,v2){
@@ -40,25 +39,33 @@
             return resultado;
         }
 
-        while(duvida == "sim"){
-            let operacao = prompt("Qual operação deseja realizar?");
+        while(duvida == 1){
+            let valor1 = Number(prompt("Digite o primeiro número: "));
+            let valor2 = Number(prompt("Digite o segundo número: "));  
+            let operacao = Number(prompt("Qual operação deseja realizar? \n 1 - Soma \n 2 - Subtração \n 3 - Divisão \n 4 - Multiplicação"));
             switch (operacao){
-                case "soma":
+                case 1:
                     total = soma(valor1, valor2);
+                    ope = " + "
                     break;
-                case "subtração":
+                case 2:
                     total = subtracao(valor1, valor2);
+                    ope = " - "
                     break;
-                case "divisão":
+                case 3:
                     total = divisao(valor1, valor2);
+                    ope = " / "
                     break;
-                case "multiplicação":
+                case 4:
                     total = multiplicacao(valor1, valor2);
+                    ope = " * "
+                    break;
+                default:
                     break;                    
             }
-            document.getElementById("resultado").innerHTML += "<br/>" + total;
+            document.getElementById("resultado").innerHTML += "<br/>" + "Cálculo: " + valor1 + ope + valor2 + " = " + total;
 
-            duvida = prompt("Deseja relizar outra conta? ");
+            duvida = prompt("Deseja relizar outro cálculo? \n 1 - Sim \n 2 - Não");
 
         }
     </script>
