@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora básica</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p id="resultado"></p>
+
+    <script>
+        let valor1 = Number(prompt("Digite o primeiro número: "));
+        let valor2 = Number(prompt("Digite o segundo número: "));      
+        let duvida = "sim";
+        let total = 0
+
+        function soma(v1,v2){
+            let resultado;
+            resultado = v1 + v2;
+            return resultado;
+        }
+
+        function subtracao(v1,v2){
+            let resultado;
+            resultado = v1 - v2;
+            return resultado;
+        }
+
+        function divisao(v1,v2){
+            let resultado;
+            resultado = v1 / v2;
+            return resultado;
+        }
+
+        function multiplicacao(v1,v2){
+            let resultado;
+            resultado = v1 * v2;
+            return resultado;
+        }
+
+        while(duvida == "sim"){
+            let operacao = prompt("Qual operação deseja realizar?");
+            switch (operacao){
+                case "soma":
+                    total = soma(valor1, valor2);
+                    break;
+                case "subtração":
+                    total = subtracao(valor1, valor2);
+                    break;
+                case "divisão":
+                    total = divisao(valor1, valor2);
+                    break;
+                case "multiplicação":
+                    total = multiplicacao(valor1, valor2);
+                    break;                    
+            }
+            document.getElementById("resultado").innerHTML += "<br/>" + total;
+
+            duvida = prompt("Deseja relizar outra conta? ");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <h1>Usando o Switch Case</h1>
+    <h1>Títulos Mundiais</h1>
+    <p>Time:<span id="time"></span></p>
+    <p>Títulos:<span id="titulos"></span></p>
+
+    <script>
+        let time = prompt("Qual time você deseja saber");
+        let titulo = 0
+        switch (time) {
+            case "Corinthians":
+                titulo = 2;
+                break;
+            case "Palmeiras":
+                titulo = 1;
+                break;
+            case "São Paulo":
+                titulo = 3;
+                break;
+            case "São Bernado do Campo":
+                titulo = 5;
+                break;
+            case "Santos":
+                titulo = 2;
+                break;
+            default:
+                titulo = 0;
+                break;
+        }
+
+        document.getElementById("titulos").innerHTML = titulo;
+        document.getElementById("time").innerHTML = time;
+
+
+    </script>
+
+</body>
+</html>
