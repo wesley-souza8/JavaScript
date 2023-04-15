@@ -25,14 +25,15 @@
             return dia + "/" + mes + "/" + ano;
         }
 
-        function datadevolucao(){
-            let dataRetorno = Date.now();
-                dataRetorno = new Date(dataRetorno)+15;
+        function datadevolucao() {
+            let dataRetorno = new Date();
+            dataRetorno.setDate(dataRetorno.getDate() + 15);
             let dia = dataRetorno.getDate();
-            let mes = dataRetorno.getMonth()+1;
+            let mes = dataRetorno.getMonth() + 1;
             let ano = dataRetorno.getFullYear();
             return dia + "/" + mes + "/" + ano;
         }
+
 
         const usuarios = ["Maria","João","jose","Antônia"];
         const livros = ["Pé de laranja lima","Meu amor cheio de ódio","Pinóquio","O Senhor dos aneis"];
