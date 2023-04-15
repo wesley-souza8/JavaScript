@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprestimo de livros</title>
+</head>
+<body>
+
+    <h1>Biblioteca do Senac</h1>
+    <p>Usuário: <span id="usuario"></span></p>
+    <p>Livro: <span id="livro"></span></p>
+    <p>Data do empréstimo: <span id="datasaida"></span></p>
+    <p>Data da devolução: <span id="dataretorno"></span></p>
+    
+    <script>
+
+        function datahoje(){
+            let dataAgora = Date.now();
+                dataAgora = new Date(dataAgora);
+            let dia = dataAgora.getDate();
+            let mes = dataAgora.getMonth()+1;
+            let ano = dataAgora.getFullYear();
+            return dia + "/" + mes + "/" + ano;
+        }
+
+        function datadevolucao(){
+            let dataRetorno = Date.now();
+                dataRetorno = new Date(dataRetorno)+15;
+            let dia = dataRetorno.getDate();
+            let mes = dataRetorno.getMonth()+1;
+            let ano = dataRetorno.getFullYear();
+            return dia + "/" + mes + "/" + ano;
+        }
+
+        const usuarios = ["Maria","João","jose","Antônia"];
+        const livros = ["Pé de laranja lima","Meu amor cheio de ódio","Pinóquio","O Senhor dos aneis"];
+
+        let usuarioId = Number(prompt("Digite o seu código:"))-1;
+        let livrosId = Number(prompt("Olá " + usuarios[usuarioId] + "\n\nEscolha um livro para empréstimo:\n1 - " + livros[0] + "\n2 - " + livros[1] + "\n3 - " + livros[2] + "\n4 - " + livros[3] + "\n\nDigite o código do livro:"))-1;
+
+        document.getElementById("usuario").innerHTML = usuarios[usuarioId]
+        document.getElementById("livro").innerHTML = livros[livrosId]
+        document.getElementById("datasaida").innerHTML = datahoje()
+        document.getElementById("dataretorno").innerHTML = datadevolucao()
+
+    </script>
+
+</body>
+</html>
